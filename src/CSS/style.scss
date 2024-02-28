@@ -1,0 +1,248 @@
+$clr1:black;
+$clr2:slateblue;
+$clr3:white;
+
+*{
+    font-family: poppins;
+}
+
+* h1,h2,h3,h5,p{
+    margin: 0;
+}
+
+* a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color:$clr1;
+}
+
+.navbar span {
+    color:$clr3 ;
+}
+
+.navbar h1{
+    /* border: 1px solid red; */
+    color: $clr2;
+}
+
+.navbar a{
+    /* border: 1px solid red; */
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.navbar .nav-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.navbar .nav-links .create {
+    border: 2px solid #ffffff;
+    /* color: #000000; */
+    font-weight: 500;
+    padding: 10px 20px;
+    z-index: 1;
+    color:white;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+.navbar .create::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: white;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.navbar .create:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.navbar .create:hover{
+    color: black;
+}
+
+
+.home{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px;
+    text-transform: capitalize;
+}
+
+.blog-cont{
+    display: flex;
+    border: 1px solid red;
+}
+
+.blog-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    // border: 1px solid red;
+    width: 70%;
+    transition: .5s;
+    &:hover{
+        box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.107);
+    }
+    h1{
+        color: $clr2;
+    }
+    a{
+        position: relative;
+        color: teal;
+        border: 2px solid $clr1;
+        /* color: #000000; */
+        font-weight: 500;
+        padding: 5px 20px;
+        z-index: 1;
+        color:$clr1;
+        overflow: hidden;
+        transition: .5s;
+        border-radius: 10px;
+        &::before{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            background:$clr1;
+            width: 0;
+            height: 100%;
+            z-index: -1;
+            transition: .5s;
+        }
+        &:hover{
+            color: $clr3;
+            &::before{
+                width: 100%;
+                left: 0;
+            }
+        }
+
+    }
+    span{
+        color: $clr2;
+    }
+    .strong{
+        font-weight: 600;
+    }
+}
+
+.add-new-blog{
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    h1{
+        color: $clr2;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 400px;
+        background:$clr3;
+        padding: 30px;
+        // box-shadow: 1px 1px 20px black;
+        input{
+            padding: 10px;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+            transition: .5s;
+            &:focus{
+                border-bottom: 2px solid $clr2;
+                // transition: .5s;
+                color: $clr2;
+            }
+        }
+        textarea{
+            height: 100px;
+            padding: 5px 10px;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.098);
+            transition: .5s;
+            &:focus{
+                border-bottom: 2px solid $clr2;
+                color: $clr2;
+            }
+        }
+        button{
+            background: $clr2;
+            color: white;
+            padding: 10px;
+            width: 150px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+        }
+
+    }
+}
+
+.cont-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-details{
+    // border: 1px solid red;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap ;
+    gap: 20px;
+    width: 700px;
+    justify-content: center;
+    align-self: center;
+    padding: 40px;
+    p{
+        text-align: center;
+        // text-overflow: clip;
+        width: 500px;
+        word-break: break-all;
+    }
+    h1{
+        color: $clr2;
+    }
+    // .p-cont{
+    //    overflow: scroll;
+    //    width: 100%;
+    //    border: 1px solid red;
+    // }
+
+    button{
+        
+    }
+}
